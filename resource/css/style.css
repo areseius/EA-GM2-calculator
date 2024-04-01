@@ -60,7 +60,7 @@ body {
   user-select: none;
   border: none;
   outline: none;
-  transition: 0.3s;
+  transition: 0.1s;
 }
 .del,
 .percent,
