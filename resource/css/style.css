@@ -1,3 +1,5 @@
+/* body */
+
 body {
   background-color: black;
   display: flex;
@@ -7,8 +9,10 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* calculator */
+
 #calculator {
-  border: 10px solid rgba(255, 255, 255, 0.26);
+  border: 8px solid rgba(255, 255, 255, 0.26);
   border-radius: 20px;
   overflow: hidden;
   height: 700px;
@@ -17,12 +21,7 @@ body {
   grid-template-rows: 0.8fr 2fr;
 }
 
-#buttons {
-  margin: 20px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 15px;
-}
+/* input display */
 
 #inputDisplay {
   height: 100%;
@@ -36,6 +35,15 @@ body {
   font-weight: bold;
   color: white;
   letter-spacing: 2px;
+}
+
+/* buttons */
+
+#buttons {
+  margin: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
 }
 
 .btn,
@@ -52,6 +60,7 @@ body {
   user-select: none;
   border: none;
   outline: none;
+  transition: 0.3s;
 }
 .del,
 .percent,
@@ -66,4 +75,18 @@ body {
 .minus {
   background-color: #ee9406 !important;
   color: white !important;
+}
+
+.btn:active,
+.equal:active,
+.ac:active,
+.del:active,
+.percent:active {
+  transform: scale(0.8);
+}
+
+@media only screen and (max-width: 450px) {
+  #calculator {
+    border: none;
+  }
 }

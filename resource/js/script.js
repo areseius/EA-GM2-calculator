@@ -19,7 +19,10 @@ buttons.forEach((x) =>
 
 equal.addEventListener("click", (e) => {
   try {
-    display.value = eval(display.value.replaceAll("x", "*"));
+    display.value != "" &&
+      (display.value = eval(
+        display.value.replaceAll("x", "*").replaceAll("÷", "/")
+      ));
   } catch (error) {
     display.value = "syntactic error";
   }
